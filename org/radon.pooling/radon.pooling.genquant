@@ -1,0 +1,7 @@
+generated quantities{
+real lik;
+lik = 0;
+for (observe_i in 1:N) {
+	   lik = lik+  normal_lpdf(z_test[observe_i] | a+b*(x[observe_i]),sigma_y);
+}
+}

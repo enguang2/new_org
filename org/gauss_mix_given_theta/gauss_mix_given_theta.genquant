@@ -1,0 +1,9 @@
+generated quantities{
+real lik;
+lik = 0;
+for (observe_i in 1:N) {
+   lik += log_mix(theta,
+                     normal_lpdf(z_test[observe_i] | mu[1], sigma[1]),
+                     normal_lpdf(z_test[observe_i] | mu[2], sigma[2]));
+}
+}

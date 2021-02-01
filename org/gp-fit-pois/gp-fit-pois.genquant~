@@ -1,0 +1,7 @@
+generated quantities{
+real lik;
+lik = 0;
+for (observe_i in 1:N) {
+	   lik = lik+  poisson_log_lpdf(z_test[observe_i] | a+f[observe_i]);
+}
+}

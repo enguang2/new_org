@@ -1,0 +1,5 @@
+for ff in `cat prog_all_39`; 
+do 
+	echo "\"$ff"\",; 
+	
+done

@@ -1,0 +1,7 @@
+generated quantities{
+real lik;
+lik = 0;
+for (observe_i in 1:N) {
+	   lik = lik+  bernoulli_logit_lpdf(z_test[observe_i] | beta[1]+(beta[2])*(dist100[observe_i])+(beta[3])*(arsenic[observe_i])+(beta[4])*(educ4[observe_i]));
+}
+}

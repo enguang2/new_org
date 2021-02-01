@@ -1,0 +1,12 @@
+generated quantities{
+real lik;
+real ps[K];  
+lik = 0;
+
+  for (n in 1:N) {
+    for (k in 1:K)
+      ps[k] <- log(theta[k]) 
+               + normal_log(z_test[n],mu[k],sigma[k]);
+    lik+=(log_sum_exp(ps));
+}
+}

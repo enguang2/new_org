@@ -1,0 +1,7 @@
+generated quantities{
+real lik;
+lik = 0;
+for (n in 1:N) {
+	   lik = lik+  normal_lpdf(z_test[n] | a[county[n]]+b*(x[n]),sigma_y);
+}
+}
